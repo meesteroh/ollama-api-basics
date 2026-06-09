@@ -1,5 +1,13 @@
-// This is a simple test script to verify that the Ollama API is working correctly.
-// You must have the Ollama server running on your machine for this to work. You can start it with the command `ollama serve` in your terminal.
+// BIG IDEA:
+// How does our code talk to another program (AI) using HTTP?
+
+
+// Think of this entire file as:
+// Your app → sends request → AI → sends response back
+
+
+// Ollama must be installed and running. Running `ollama run llama3` in terminal will start it if needed.
+
 
 // This line creates an http object to access the built-in http tools.
 // require is a function that allows us to import modules in Node.js. We use it to import the built-in http module.
@@ -31,7 +39,7 @@ const options = {
 // res = response object from the server.
 
 //This line sends the request and uses a calllback function to handle the response.
-//Response starts, callback runs, 
+// When the server sends a response, this callback runs and the response is passed in as the res parameter.
 const req = http.request(options, (res) => {
   let body = "";                //empty string to fill up with the response chunks as they come in
   
