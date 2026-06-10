@@ -11,6 +11,7 @@
 
 // This line creates an http object to access the built-in http tools.
 // require is a function that allows us to import modules in Node.js. We use it to import the built-in http module.
+// It imports the http module. 
 const http = require("http");
 
 
